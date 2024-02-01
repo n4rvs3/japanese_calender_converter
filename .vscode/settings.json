@@ -1,4 +1,9 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッターをPrettierにする
-    "editor.formatOnSave": true // ファイル保存時にフォーマットを実行
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッターをPrettierにする
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true
 }
