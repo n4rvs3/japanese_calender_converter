@@ -1,0 +1,25 @@
+{
+  "name": "japanese_calendar_converter",
+  "version": "0.0.1",
+  "description": "和暦と西暦を相互に変換出来るライブラリ",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
+  },
+  "main": "dist/index.js",
+  "author": "n4rvs3",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.14",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  }
+}
