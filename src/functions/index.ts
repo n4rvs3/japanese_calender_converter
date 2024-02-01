@@ -1,0 +1,1 @@
+export { toJapaneseEra } from './toJapaneseEra';
