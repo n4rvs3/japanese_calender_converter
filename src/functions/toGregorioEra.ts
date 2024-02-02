@@ -9,9 +9,11 @@ export const toGregorioEra = (era: DetailedEraInfo): number => {
     throw new Error('era must be one of 明治, 大正, 昭和, 平成, 令和.');
   }
   const { start } = eraInfo;
-  const yearStr = year.toString().padStart(2, '0');
+  const startYear = parseInt(start.toString().slice(0, 4), 10);
+  const gregorianYear = startYear + year - 1;
+  const yearStr = gregorianYear.toString().padStart(4, '0');
   const monthStr = month.toString().padStart(2, '0');
   const dateStr = date.toString().padStart(2, '0');
-  const yyyymmdd = parseInt(`${start}${yearStr}${monthStr}${dateStr}`, 10);
+  const yyyymmdd = parseInt(`${yearStr}${monthStr}${dateStr}`, 10);
   return yyyymmdd;
 };
