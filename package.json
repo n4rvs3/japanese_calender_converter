@@ -1,6 +1,6 @@
 {
   "name": "japanese_calendar_converter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "和暦と西暦を相互に変換出来るライブラリ",
   "scripts": {
     "build": "tsc",
