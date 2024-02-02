@@ -39,15 +39,11 @@ export const toJapaneseEra = (yyyymmdd: number): DetailedEraInfo => {
 
   for (let i = 0; i < era.length; i++) {
     if (yyyymmdd >= era[i].start && yyyymmdd <= era[i].end) {
-      const tmpEra = era[i].name;
-      const tmpYear = calcYear(yyyymmdd, era[i].start);
-      const tmpMonth = calcMonth(yyyymmdd);
-      const tmpDate = calcDate(yyyymmdd);
       const japaneseEra: DetailedEraInfo = {
-        era: tmpEra,
-        year: tmpYear,
-        month: tmpMonth,
-        date: tmpDate,
+        era: era[i].name,
+        year: calcYear(yyyymmdd, era[i].start),
+        month: calcMonth(yyyymmdd),
+        date: calcDate(yyyymmdd),
       };
       return japaneseEra;
     }
