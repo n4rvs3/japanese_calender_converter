@@ -1,2 +1,2 @@
-export { toJapaneseEra } from './toJapaneseEra';
-export { toGregorioEra } from './toGregorioEra';
+export * from './toJapaneseEra';
+export * from './toGregorioEra';
