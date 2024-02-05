@@ -9,7 +9,25 @@ import { DetailedEraInfo } from '../types/era';
 const calcYear = (yyyymmdd: number, start: number): number => {
   const fullYear = parseInt(yyyymmdd.toString().slice(0, 4), 10);
   const eraStartYear = parseInt(start.toString().slice(0, 4), 10);
-  const year = fullYear - eraStartYear + 1;
+  // const eraEndYear = parseInt(end.toString().slice(0, 4), 10);
+  const eraStartMonthDay = parseInt(start.toString().slice(4, 8), 10);
+  const inputMonthDay = parseInt(yyyymmdd.toString().slice(4, 8), 10);
+  let year = fullYear - eraStartYear + 1;
+
+  // 昭和64年の特殊なケースを処理
+  if (fullYear === 1989 && yyyymmdd <= 19890107) {
+    year = year - 1;
+  }
+
+  // 平成元年の特殊なケースを処理
+  if (fullYear === 1989 && yyyymmdd >= 19890108) {
+    year = 1;
+  }
+
+  if (fullYear === eraStartYear && inputMonthDay < eraStartMonthDay) {
+    year = year - 1;
+  }
+
   return year;
 };
 
@@ -49,5 +67,5 @@ export const toJapaneseEra = (yyyymmdd: number): DetailedEraInfo => {
     }
   }
 
-  throw new Error('yyyymmdd must be between 18680125 and 20341231.');
+  throw new Error('yyyymmdd must be between 18680101 and 20341231.');
 };

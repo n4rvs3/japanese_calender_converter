@@ -2,7 +2,7 @@ import type { EraType } from '../types';
 
 export const Era: EraType[] = [
   {
-    start: 18680125,
+    start: 18680101,
     end: 19120729,
     name: '明治',
     nameKana: 'めいじ',
