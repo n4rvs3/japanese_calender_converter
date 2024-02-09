@@ -6,6 +6,15 @@ export type EraType = {
   range?: number[];
 };
 
+export type argsGregorioEra = {
+  data: {
+    era: '明治' | '大正' | '昭和' | '平成' | '令和';
+    year: number;
+    month: number;
+    date: number;
+  };
+};
+
 export interface DetailedEraInfo {
   error: string | null;
   data: {

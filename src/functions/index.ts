@@ -5,7 +5,6 @@ export * from './toJapaneseEra';
 export * from './toGregorioEra';
 
 const test = toGregorioEra({
-  error: null,
   data: {
     era: '平成',
     year: 31,

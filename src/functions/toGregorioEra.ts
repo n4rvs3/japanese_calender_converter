@@ -1,10 +1,10 @@
-import { DetailedEraInfo, DetailedGregorioInfo } from '../types/era';
+import { argsGregorioEra, DetailedGregorioInfo } from '../types/era';
 import { Era } from '../utils';
 import { parse, compareAsc, isValid } from 'date-fns';
 
 // 和暦から西暦に変換する関数
 export const toGregorioEra = (
-  japaneseEra: DetailedEraInfo | null
+  japaneseEra: argsGregorioEra | null
 ): DetailedGregorioInfo => {
   try {
     if (!japaneseEra || !japaneseEra.data) {
