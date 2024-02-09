@@ -17,7 +17,7 @@ export interface DetailedEraInfo {
 export interface DetailedGregorioInfo {
     error: string | null;
     data: {
-        year: number;
+        year: string;
     } | null;
 }
 //# sourceMappingURL=era.d.ts.map

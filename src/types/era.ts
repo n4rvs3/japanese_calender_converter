@@ -18,5 +18,5 @@ export interface DetailedEraInfo {
 
 export interface DetailedGregorioInfo {
   error: string | null;
-  data: { year: number } | null;
+  data: { year: string } | null;
 }
